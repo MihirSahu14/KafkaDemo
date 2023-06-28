@@ -14,7 +14,7 @@ public class RestControllerForKafkaMsg {
   @Autowired
   Producer producer;
   @GetMapping("/producerMsg")
-  public void getMessageFromClient(@RequestParam("Message") String message){
+  public void getMessageFromClient(@RequestParam("message") String message){
     producer.sendMsgToTopic(message);
   }
 }
